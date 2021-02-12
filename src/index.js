@@ -68,7 +68,7 @@ const Timeline = ({
         style={{
           color,
           position: "absolute",
-          top: height <= 60 ? "5%" : "15%",
+          top: height <= 60 ? "1%" : "15%",
           fontSize: "smaller",
           userSelect: "none",
         }}
@@ -123,7 +123,7 @@ const Timeline = ({
                   position: "absolute",
                   top: -16,
                   left:
-                    height >= 50
+                    height >= 40
                       ? `calc(${100 * mousePercent}% * 0.94)`
                       : "50%",
                   color,

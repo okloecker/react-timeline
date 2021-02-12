@@ -51,7 +51,7 @@ export const TimelineInteractiveWhite = () => {
       width={500}
       height={100}
       padding={50}
-      text={"(1.2)"}
+      text="(1.2)"
     />
   );
 };
@@ -71,7 +71,7 @@ export const TimelineInteractiveNarrow = () => {
         totalDuration={1800}
         onSetNewTime={setTime}
         width={100}
-        height={50}
+        height={40}
         padding={3}
         color="white"
       />
