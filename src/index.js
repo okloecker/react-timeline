@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./Timeline.css";
+import styles from "./styles.module.css";
 
 /**
  * Converts a numeric seconds value into a human readable HH:MM form.
@@ -32,7 +32,7 @@ const Timeline = ({
   return (
     <div
       id="timelineContainer"
-      className="reacttimelinebartimelineContainer"
+      className={styles.timelineContainer}
       style={{
         paddingLeft: `${padding}px`,
         paddingRight: `${padding}px`,
@@ -66,7 +66,7 @@ const Timeline = ({
     >
       <div
         id="timelineTimes"
-        className="react-timeline-bar_timelineTimes"
+        className={styles.timelineTimes}
         style={{
           color,
           top: height <= 60 ? "1%" : "15%",
@@ -76,11 +76,11 @@ const Timeline = ({
           totalDuration
         )} ${text ? `${text}` : ""}`}
       </div>
-      <div className="react-timeline-bar_timelineBar" id="timelineBar">
+      <div className={styles.timelineBar} id="timelineBar">
         {!!mouseEntered && (
           <div
             id="timelineDot"
-            className="react-timeline-bar_timelineDot"
+            className={styles.timelineDot}
             style={{
               left: `calc(${(100 * currentTime) / totalDuration}% - 6px)`,
               background: color,
@@ -92,7 +92,7 @@ const Timeline = ({
           <React.Fragment>
             <div
               id="timelineIndicator"
-              className="react-timeline-bar_timelineIndicator"
+              className={styles.timelineIndicator}
               style={{
                 width: `calc(${(100 * currentTime) / totalDuration}%)`,
                 background: color,
@@ -102,7 +102,7 @@ const Timeline = ({
             {!!mouseEntered && (
               <div
                 id="timelineTooltip"
-                className="react-timeline-bar_timelineTooltip"
+                className={styles.timelineTooltip}
                 style={{
                   left:
                     height >= 40
