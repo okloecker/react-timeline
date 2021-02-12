@@ -102,7 +102,7 @@ const Timeline = ({
           />
         )}
         {totalDuration !== undefined && totalDuration !== null && (
-          <>
+          <React.Fragment>
             <div
               id="timelineIndicator"
               style={{
@@ -133,7 +133,7 @@ const Timeline = ({
                 {formatSecsToFriendly(mouseTime)}
               </div>
             )}
-          </>
+          </React.Fragment>
         )}
       </div>
     </div>
