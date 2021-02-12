@@ -16,6 +16,7 @@ npm install --save react-timeline-bar
 import React from 'react'
 
 import Timeline from 'react-timeline-bar'
+import 'react-timeline-bar/dist/index.css'
 
 const Example = () => {
   render() {
