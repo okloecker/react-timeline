@@ -40,6 +40,7 @@ const Example = () => {
 * the display is similar to the timeline in HTML5 <video> controls
 * mouse movement is translated into time value within the totalDuration time space
 * clicking will return the time value where the mouse is back to the parent component through the onSetNewTime callback
+* when using 'width="100%"', set "padding={0}" to avoid miscalculations of mouse position clicks
 
 ## Others
 * bootstrapped with [create-react-library](https://github.com/transitive-bullshit/create-react-library)

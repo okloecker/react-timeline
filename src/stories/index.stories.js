@@ -72,7 +72,33 @@ export const TimelineInteractiveNarrow = () => {
         onSetNewTime={setTime}
         width={100}
         height={40}
-        padding={3}
+        color="white"
+      />
+    </div>
+  );
+};
+
+/*
+ * 100% of parent width, but since padding is added to 100%, must set padding to 0
+ */
+export const TimelineInteractiveDynamicWidth = () => {
+  const [time, setTime] = useState(0);
+  return (
+    <div
+      style={{
+        width: 180,
+        display: "inline-block",
+        backgroundImage:
+          "linear-gradient(to top,rgba(0,0,0,.8),rgba(0,0,0,0.3))",
+      }}
+    >
+      <Timeline
+        currentTime={time}
+        totalDuration={1800}
+        onSetNewTime={setTime}
+        width="100%"
+        height={40}
+        padding={0}
         color="white"
       />
     </div>
