@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+/**
+ * Converts a numeric seconds value into a human readable HH:MM form.
+ */
 const formatSecsToFriendly = (s) =>
   `${Math.floor(s / 60)
     .toFixed(0)
@@ -8,6 +11,9 @@ const formatSecsToFriendly = (s) =>
     .toString()
     .padStart(2, "0")}`;
 
+/**
+ * An interactive React.js component for a video timeline.
+ */
 const Timeline = ({
   currentTime = 0,
   totalDuration = 0,
