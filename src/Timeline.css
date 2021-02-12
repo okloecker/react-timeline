@@ -1,16 +1,16 @@
 /* add css module styles here (optional) */
-.timelineContainer {
+.reacttimelinebartimelineContainer {
   position: relative;
   cursor: pointer;
 }
 
-.timelineTimes {
+.react-timeline-bar_timelineTimes {
   position: absolute;
   font-size: smaller;
   user-select: none;
 }
 
-.timelineBar {
+.react-timeline-bar_timelineBar {
   position: absolute;
   bottom: 20%;
   width: inherit;
@@ -18,7 +18,7 @@
   background: #6f6f6f;
 }
 
-.timelineDot {
+.react-timeline-bar_timelineDot {
   position: absolute;
   top: -3px;
   width: 12px;
@@ -36,14 +36,14 @@
   }
 }
 
-.timelineIndicator {
+.react-timeline-bar_timelineIndicator {
   position: absolute;
   bottom: 0px;
   height: 6px;
   border-radius: 4px;
 }
 
-.timelineTooltip {
+.react-timeline-bar_timelineTooltip {
   position: absolute;
   top: -16px;
   font-size: small;
