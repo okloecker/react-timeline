@@ -1,10 +1,10 @@
 {
-  "name": "react-timeline",
+  "name": "react-timeline-bar",
   "version": "1.0.0",
   "description": "timeline control to use for videos",
   "author": "okloecker",
   "license": "MIT",
-  "repository": "okloecker/react-timeline.git",
+  "repository": "okloecker/react-timeline-bar.git",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",

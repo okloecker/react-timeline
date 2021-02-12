@@ -1,13 +1,13 @@
-# react-timeline
+# react-timeline-bar
 
 > timeline control to use for videos
 
-[![NPM](https://img.shields.io/npm/v/react-timeline.svg)](https://www.npmjs.com/package/react-timeline) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-timeline-bar.svg)](https://www.npmjs.com/package/react-timeline-bar) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save react-timeline
+npm install --save react-timeline-bar
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install --save react-timeline
 ```jsx
 import React from 'react'
 
-import Timeline from 'react-timeline'
+import Timeline from 'react-timeline-bar'
 
 const Example = () => {
   render() {
