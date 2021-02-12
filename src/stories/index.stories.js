@@ -51,6 +51,7 @@ export const TimelineInteractiveWhite = () => {
       width={500}
       height={100}
       padding={50}
+      text={"(1.2)"}
     />
   );
 };

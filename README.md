@@ -33,6 +33,7 @@ const Example = () => {
 * width div width of component, default 300px
 * padding left/right padding, default 10px
 * color default black
+* text optional text to be displayed after total duration
 
 ## Behaviour
 * the display is similar to the timeline in HTML5 <video> controls

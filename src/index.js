@@ -17,6 +17,7 @@ const formatSecsToFriendly = (s) =>
 const Timeline = ({
   currentTime = 0,
   totalDuration = 0,
+  text,
   onSetNewTime,
   height = 50,
   width = 300,
@@ -74,7 +75,7 @@ const Timeline = ({
       >
         {`${formatSecsToFriendly(currentTime)} / ${formatSecsToFriendly(
           totalDuration
-        )}`}
+        )} ${text ? `${text}` : ""}`}
       </div>
       <div
         id="timelineBar"
