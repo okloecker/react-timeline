@@ -11,6 +11,14 @@ export const TimelineDefault = () => (
   <Timeline onSetNewTime={action("onSetNewTime")} />
 );
 
+export const TimelineHours = () => (
+  <Timeline onSetNewTime={action("onSetNewTime")} totalDuration={3800} />
+);
+
+export const TimelineHours2 = () => (
+  <Timeline onSetNewTime={action("onSetNewTime")} totalDuration={3800 * 10} />
+);
+
 export const Timeline100 = () => (
   <Timeline
     currentTime={100}

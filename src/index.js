@@ -3,15 +3,28 @@ import React, { useState } from "react";
 import styles from "./styles.module.css";
 
 /**
- * Converts a numeric seconds value into a human readable HH:MM form.
+ * Converts a numeric seconds value into a human readable HH:MM:SS form.
+ * "HH:" will be left out if less than 60 minutes
+ * first value (hours or minutes) will be 1 or 2 digits
+ * seconds will always be 2 digits
  */
-const formatSecsToFriendly = (s) =>
-  `${Math.floor(s / 60)
-    .toFixed(0)
-    .toString()}:${Math.floor(s % 60)
+const formatSecsToFriendly = (s) => {
+  let seconds = s;
+  const hours = Math.floor(seconds / 3600);
+  if (hours) seconds = seconds - hours * 3600;
+  const hoursS = hours.toFixed(0);
+  const minutes = Math.floor(seconds / 60).toFixed(0);
+  const minutesS = minutes.toString();
+  const secondsS = Math.floor(seconds % 60)
     .toFixed(0)
     .toString()
-    .padStart(2, "0")}`;
+    .padStart(2, "0");
+  let res = hours ? `${hoursS}:` : "";
+  if (hours) res = minutes ? `${res}${minutesS.padStart(2, "0")}` : "";
+  else res = minutes ? `${res}${minutesS}` : "";
+  res = `${res}:${secondsS.padStart(2, "0")}`;
+  return res;
+};
 
 /**
  * An interactive React.js component for a video timeline.
