@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import styles from "./Timeline.module.css";
+
 /**
  * Converts a numeric seconds value into a human readable HH:MM form.
  */
@@ -30,13 +32,12 @@ const Timeline = ({
   return (
     <div
       id="timelineContainer"
+      className={styles.timelineContainer}
       style={{
-        position: "relative",
         paddingLeft: `${padding}px`,
         paddingRight: `${padding}px`,
         width,
         height,
-        cursor: "pointer",
       }}
       onMouseEnter={(_) => setMouseEntered(true)}
       onMouseLeave={(_) => setMouseEntered(false)}
@@ -65,39 +66,24 @@ const Timeline = ({
     >
       <div
         id="timelineTimes"
+        className={styles.timelineTimes}
         style={{
           color,
-          position: "absolute",
           top: height <= 60 ? "1%" : "15%",
-          fontSize: "smaller",
-          userSelect: "none",
         }}
       >
         {`${formatSecsToFriendly(currentTime)} / ${formatSecsToFriendly(
           totalDuration
         )} ${text ? `${text}` : ""}`}
       </div>
-      <div
-        id="timelineBar"
-        style={{
-          position: "absolute",
-          bottom: "20%",
-          width: "inherit",
-          height: 6,
-          background: "#6f6f6f",
-        }}
-      >
+      <div className={styles.timelineBar} id="timelineBar">
         {!!mouseEntered && (
           <div
             id="timelineDot"
+            className={styles.timelineDot}
             style={{
-              position: "absolute",
-              top: -3,
               left: `calc(${(100 * currentTime) / totalDuration}% - 6px)`,
-              width: 12,
-              height: 12,
               background: color,
-              borderRadius: "50%",
               color,
             }}
           />
@@ -106,29 +92,23 @@ const Timeline = ({
           <React.Fragment>
             <div
               id="timelineIndicator"
+              className={styles.timelineIndicator}
               style={{
-                position: "absolute",
-                bottom: 0,
                 width: `calc(${(100 * currentTime) / totalDuration}%)`,
-                height: 6,
                 background: color,
                 color,
-                borderRadius: 4,
               }}
             />
             {!!mouseEntered && (
               <div
                 id="timelineTooltip"
+                className={styles.timelineTooltip}
                 style={{
-                  position: "absolute",
-                  top: -16,
                   left:
                     height >= 40
                       ? `calc(${100 * mousePercent}% * 0.94)`
                       : "50%",
                   color,
-                  fontSize: "small",
-                  userSelect: "none",
                 }}
               >
                 {formatSecsToFriendly(mouseTime)}

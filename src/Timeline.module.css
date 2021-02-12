@@ -1,0 +1,41 @@
+/* add css module styles here (optional) */
+.timelineContainer {
+  position: relative;
+  cursor: pointer;
+}
+
+.timelineTimes {
+  position: absolute;
+  font-size: smaller;
+  user-select: none;
+}
+
+.timelineBar {
+  position: absolute;
+  bottom: 20%;
+  width: inherit;
+  height: 6px;
+  background: #6f6f6f;
+}
+
+.timelineDot {
+  position: absolute;
+  top: -3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.timelineIndicator {
+  position: absolute;
+  bottom: 0px;
+  height: 6px;
+  border-radius: 4px;
+}
+
+.timelineTooltip {
+  position: absolute;
+  top: -16px;
+  font-size: small;
+  user-select: none;
+}
